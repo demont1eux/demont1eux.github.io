@@ -27,8 +27,14 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      align-items: flex-start;
+      padding: 40px 16px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    @media(min-height: 700px) {
+      body { align-items: center; }
     }
 
     #sparks { position:fixed; inset:0; pointer-events:none; z-index:9998; }
@@ -329,10 +335,23 @@
     footer { margin-top:22px; color:rgba(130,114,181,0.38); font-size:11px; font-weight:500; letter-spacing:.5px; }
 
     @media(max-width:480px){
-      .card { padding:26px 16px 22px; }
-      h1 { font-size:22px; }
-      .avatar { width:96px; height:96px; }
-      .avatar-wrap { width:114px; height:114px; }
+      .card { padding:28px 14px 24px; width:100%; }
+      h1 { font-size:21px; }
+      .avatar { width:90px; height:90px; }
+      .avatar-wrap { width:108px; height:108px; margin-bottom:14px; }
+      .btn { padding:11px 12px; gap:10px; }
+      .btn-icon { width:34px; height:34px; }
+      .btn-label { font-size:13px; }
+      .btn-sub { font-size:10px; }
+      .tags { gap:5px; margin-bottom:20px; }
+      .tag { font-size:9.5px; padding:2px 8px; }
+      .links { gap:8px; }
+    }
+
+    @media(max-width:360px){
+      .card { padding:22px 10px 20px; }
+      h1 { font-size:19px; }
+      .btn-arrow { display:none; }
     }
   </style>
 </head>
